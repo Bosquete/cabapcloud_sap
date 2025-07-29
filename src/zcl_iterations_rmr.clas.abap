@@ -21,9 +21,9 @@ CLASS zcl_iterations_rmr IMPLEMENTATION.
 * Declarations
 **********************************************************************
 
-    CONSTANTS c_number TYPE i VALUE 3.
+   CONSTANTS c_number TYPE i VALUE 3.
 *    CONSTANTS c_number TYPE i VALUE 5.
-*    CONSTANTS c_number TYPE i VALUE 10.
+*   CONSTANTS c_number TYPE i VALUE 10.
 
     DATA number TYPE i.
 
