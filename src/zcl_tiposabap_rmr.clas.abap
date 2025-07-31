@@ -21,27 +21,27 @@ CLASS zcl_tiposabap_rmr IMPLEMENTATION.
 *  data Objects with Built_in Types
 *  *******************************************************************************************************************************
 
-    " comment/uncomment the following declaratins and check the output
-*   DATA variable TYPE string.
-*   Data variable TYPE i.
-*   DATA varibale TYPE d.
+    " comment/uncomment the following declarations and check the output
+
+*  DATA variable TYPE string.
+*   DATA variable TYPE i.
+    DATA variable TYPE d.
 *    DATA variable TYPE c LENGTH 10.
 *    DATA variable TYPE n LENGTH 10.
-    DATA variable TYPE p LENGTH 8 DECIMALS 2.
-*
-*    output
-*    ********************************************************************************************************************************
+*    DATA variable TYPE p LENGTH 8 DECIMALS 2.
 
-    out->write( 'Result with Initial Value' ).
-    out->write(  variable ).
+* Output
+**********************************************************************
+
+    out->write(  'Result with Initial Value' ).
+    out->write( variable ).
     out->write( '---------' ).
-
 
     variable = '19891109'.
 
-    out->write( 'Resulta with Value 19891109' ).
-    out->write(  variable ).
-    out->write(  '--------' ).
+    out->write( 'Resulte with value 198911909' ).
+    out->write( variable ).
+    out->write( '---------' ).
 
 
   ENDMETHOD.

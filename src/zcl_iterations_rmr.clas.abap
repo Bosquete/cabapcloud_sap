@@ -45,13 +45,14 @@ CLASS zcl_iterations_rmr IMPLEMENTATION.
     out->write(  `Example 2: With Abort Condition` ).
     out->write(  `-------------------------------` ).
 
-    number = c_number * c_number.
+    "number = c_number * c_number.
+    number = 10.
 
     " count backwards from number to c_number.
     DO.
 
       out->write( |{ sy-index }: Value of number: {  number }| ).
-      number = number - 1.
+      number  -= 1.
 
       "abort condition
       IF number <= c_number.

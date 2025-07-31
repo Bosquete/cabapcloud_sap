@@ -49,6 +49,21 @@ CLASS zcl_aritmcalc_rmr IMPLEMENTATION.
     out->write(  result ).
 
 
+* DIV & MOD
+**********************************************************************
+
+DATA: num1 TYPE i VALUE 10,
+      num2 TYPE i VALUE 3,
+      cociente TYPE i,
+      resto TYPE i.
+
+cociente = num1 DIV num2.  " Cociente = 3
+resto = num1 MOD num2.   " Resto = 1
+
+out->write( | 'Cociente:' { cociente } | ).
+out->write( |'Resto' {  resto }| ).
+
+
 
 
 

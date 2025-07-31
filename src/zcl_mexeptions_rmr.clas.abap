@@ -35,7 +35,7 @@ CLASS zcl_mexeptions_rmr IMPLEMENTATION.
 *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 *   CONSTANTS c_text TYPE string VALUE 'ABC'.
-       CONSTANTS c_text TYPE string VALUE '123'.
+       CONSTANTS c_text TYPE string VALUE 'HOLA'.
 
     out->write( `----------------------------------` ).
     out->write( `Example 1: Conversion Error` ).
@@ -72,7 +72,7 @@ CLASS zcl_mexeptions_rmr IMPLEMENTATION.
 **********************************************************************
 
 *    CONSTANTS c_index TYPE i VALUE 2.
-    CONSTANTS c_index TYPE i VALUE 1.
+    CONSTANTS c_index TYPE i VALUE 0.
 
     out->write(  `-------------------------` ).
     out->write(  `Example 3: Line Not Found` ).
