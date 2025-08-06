@@ -1,4 +1,4 @@
-CLASS zcl_table_insert_rmr DEFINITION
+CLASS zcl_tableinsert_rmr DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_table_insert_rmr IMPLEMENTATION.
+CLASS zcl_tableinsert_rmr IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

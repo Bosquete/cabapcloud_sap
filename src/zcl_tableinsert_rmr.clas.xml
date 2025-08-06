@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_TABLE_INSERT_RMR</CLSNAME>
+    <CLSNAME>ZCL_TABLEINSERT_RMR</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>ejercicios sobre insert y más</DESCRIPT>
     <STATE>1</STATE>
