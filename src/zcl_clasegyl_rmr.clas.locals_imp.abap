@@ -19,25 +19,39 @@ CLASS lcl_connection DEFINITION.
 
     CLASS-DATA conn_counter TYPE i.
 
-    METHODS set_attributes
-    IMPORTING
-    i_carrier_id TYPE /dmo/carrier_id OPTIONAL
-    i_connection_id TYPE /dmo/connection_id.
+*    TRY.
+*    METHODS->set_attributes(
+*    EXPORTING
+*        i_carrier_id = 'LH'
+*        i_connection_id = '0400'
+*        ).
+*           connection->carrier_id = 'LH'.
+*           connection->connection_id = '0400'.
+*        Append connection TO connections.
+*
+*        CATCH cx_abap_invalid_value.
+*        out->write( `Method call failed` ).
+*
+*        ENDTRY.
+       METHODS set_attributes
+       IMPORTING
+      i_carrier_id TYPE /dmo/carrier_id
+      i_connection_id TYPE /dmo/connection_id
+        RAISING
+        cx_abap_invalid_value.
 
-*      carrier_id = i_carrier_id.
-*      connection_id = i_connection_id.
 
-
-
-    METHODS get_attributes
-    EXPORTING
+*    METHODS get_attributes
+*    EXPORTING
 *    i_carrier_id TYPE /dmo/carrier_id OPTIONAL
 *    i_connection_id TYPE /dmo/connection_id.
 
-      e_carrier_id TYPE /dmo/carrier_id
-      e_connection_id TYPE /dmo/connection_id.
+*      e_carrier_id TYPE /dmo/carrier_id
+*      e_connection_id TYPE /dmo/connection_id.
 
-
+        METHODS get_output
+            RETURNING
+            VALUE(r_output) TYPE string_table.
 
 
   PROTECTED SECTION.
@@ -51,6 +65,25 @@ ENDCLASS.
 
 CLASS lcl_connection IMPLEMENTATION.
 
+
+
+*  METHOD get_attributes.
+*        e_carrier_id = carrier_id.
+*      e_connection_id = connection_id.
+*  ENDMETHOD.
+
+*  METHOD set_attributes_me.
+*    me->carrier_id = carrier_id.
+*    me->connection_id = connection_id.
+*  ENDMETHOD.
+
+  METHOD get_output.
+
+        APPEND |------------------------------| TO r_output.
+        APPEND |Carrier:     { carrier_id    }| TO r_output.
+        APPEND |Connection:  { connection_id }| TO r_output.
+    ENDMETHOD.
+
   METHOD set_attributes.
           IF carrier_id IS INITIAL OR connection_id IS INITIAL.
         RAISE EXCEPTION TYPE cx_abap_invalid_value.
@@ -59,20 +92,9 @@ CLASS lcl_connection IMPLEMENTATION.
       connection_id = i_connection_id.
   ENDMETHOD.
 
-  METHOD get_attributes.
-        e_carrier_id = carrier_id.
-      e_connection_id = connection_id.
-  ENDMETHOD.
 
-*  METHOD set_attributes_me.
-*    me->carrier_id = carrier_id.
-*    me->connection_id = connection_id.
-*  ENDMETHOD.
 
-*  METHOD get_output.
-*
-*        APPEND |------------------------------| TO r_output.
-*        APPEND |Carrier:     { carrier_id    }| TO r_output.
-*        APPEND |Connection:  { connection_id }| TO r_output.
+
+
 
 ENDCLASS.
