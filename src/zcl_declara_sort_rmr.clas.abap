@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_declara_sort_rmr IMPLEMENTATION.
+CLASS ZCL_DECLARA_SORT_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

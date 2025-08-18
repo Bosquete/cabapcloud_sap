@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_constsap_rmr IMPLEMENTATION.
+CLASS ZCL_CONSTSAP_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

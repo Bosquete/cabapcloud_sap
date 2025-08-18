@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_except_handl_rmr IMPLEMENTATION.
+CLASS ZCL_EXCEPT_HANDL_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

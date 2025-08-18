@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_funcionescarac_rmr IMPLEMENTATION.
+CLASS ZCL_FUNCIONESCARAC_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

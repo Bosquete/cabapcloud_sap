@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_mexeptions_rmr IMPLEMENTATION.
+CLASS ZCL_MEXEPTIONS_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

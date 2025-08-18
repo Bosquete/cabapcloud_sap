@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_objetodatos_rmr IMPLEMENTATION.
+CLASS ZCL_OBJETODATOS_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

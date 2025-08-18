@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_declaraselect_rmr IMPLEMENTATION.
+CLASS ZCL_DECLARASELECT_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

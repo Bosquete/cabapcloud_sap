@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fibonacci_tabla_rmr IMPLEMENTATION.
+CLASS ZCL_FIBONACCI_TABLA_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

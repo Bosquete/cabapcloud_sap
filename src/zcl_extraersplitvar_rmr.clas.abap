@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_extraersplitvar_rmr IMPLEMENTATION.
+CLASS ZCL_EXTRAERSPLITVAR_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

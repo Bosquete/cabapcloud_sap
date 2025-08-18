@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_elimin_reg_dup_rmr IMPLEMENTATION.
+CLASS ZCL_ELIMIN_REG_DUP_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

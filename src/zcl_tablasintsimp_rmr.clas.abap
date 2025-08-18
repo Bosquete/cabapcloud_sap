@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_tablasintsimp_rmr IMPLEMENTATION.
+CLASS ZCL_TABLASINTSIMP_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

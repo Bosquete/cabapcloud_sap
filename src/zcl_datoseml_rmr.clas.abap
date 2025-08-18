@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_datoseml_rmr IMPLEMENTATION.
+CLASS ZCL_DATOSEML_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

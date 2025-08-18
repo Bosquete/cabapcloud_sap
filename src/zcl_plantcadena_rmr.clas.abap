@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_plantcadena_rmr IMPLEMENTATION.
+CLASS ZCL_PLANTCADENA_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_tableinsert_rmr IMPLEMENTATION.
+CLASS ZCL_TABLEINSERT_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

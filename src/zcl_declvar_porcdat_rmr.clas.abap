@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_declvar_porcdat_rmr IMPLEMENTATION.
+CLASS ZCL_DECLVAR_PORCDAT_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

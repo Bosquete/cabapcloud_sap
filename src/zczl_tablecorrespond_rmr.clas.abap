@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zczl_tablecorrespond_rmr IMPLEMENTATION.
+CLASS ZCZL_TABLECORRESPOND_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

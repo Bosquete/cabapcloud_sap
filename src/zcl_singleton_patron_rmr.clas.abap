@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_singleton_patron_rmr IMPLEMENTATION.
+CLASS ZCL_SINGLETON_PATRON_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

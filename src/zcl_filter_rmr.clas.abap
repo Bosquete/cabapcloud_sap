@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_filter_rmr IMPLEMENTATION.
+CLASS ZCL_FILTER_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

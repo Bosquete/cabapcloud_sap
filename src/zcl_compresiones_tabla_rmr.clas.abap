@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_compresiones_tabla_rmr IMPLEMENTATION.
+CLASS ZCL_COMPRESIONES_TABLA_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

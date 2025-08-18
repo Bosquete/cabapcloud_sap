@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_reducc_tabla_rmr IMPLEMENTATION.
+CLASS ZCL_REDUCC_TABLA_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

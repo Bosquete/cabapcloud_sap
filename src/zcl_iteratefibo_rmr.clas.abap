@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_iteratefibo_rmr IMPLEMENTATION.
+CLASS ZCL_ITERATEFIBO_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

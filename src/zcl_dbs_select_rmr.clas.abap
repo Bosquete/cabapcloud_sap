@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_dbs_select_rmr IMPLEMENTATION.
+CLASS ZCL_DBS_SELECT_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

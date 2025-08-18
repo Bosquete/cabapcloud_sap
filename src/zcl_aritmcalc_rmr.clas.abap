@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_aritmcalc_rmr IMPLEMENTATION.
+CLASS ZCL_ARITMCALC_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

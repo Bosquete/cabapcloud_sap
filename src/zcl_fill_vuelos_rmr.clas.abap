@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fill_vuelos_rmr IMPLEMENTATION.
+CLASS ZCL_FILL_VUELOS_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

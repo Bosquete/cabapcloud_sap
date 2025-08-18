@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_ramcond_rmr IMPLEMENTATION.
+CLASS ZCL_RAMCOND_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

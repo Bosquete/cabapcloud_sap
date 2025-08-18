@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_inner_join_rmr IMPLEMENTATION.
+CLASS ZCL_INNER_JOIN_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

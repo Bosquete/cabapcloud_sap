@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_tiposabap_rmr IMPLEMENTATION.
+CLASS ZCL_TIPOSABAP_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

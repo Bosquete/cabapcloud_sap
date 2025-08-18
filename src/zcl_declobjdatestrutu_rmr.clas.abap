@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_declobjdatestrutu_rmr IMPLEMENTATION.
+CLASS ZCL_DECLOBJDATESTRUTU_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

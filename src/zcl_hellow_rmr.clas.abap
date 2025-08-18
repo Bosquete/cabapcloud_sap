@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_hellow_rmr IMPLEMENTATION.
+CLASS ZCL_HELLOW_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

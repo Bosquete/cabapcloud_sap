@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_funcionesprocesa_rmr IMPLEMENTATION.
+CLASS ZCL_FUNCIONESPROCESA_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

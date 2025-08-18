@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_calculnum_rmr IMPLEMENTATION.
+CLASS ZCL_CALCULNUM_RMR IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
