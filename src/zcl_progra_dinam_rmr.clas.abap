@@ -64,5 +64,26 @@ CLASS zcl_progra_dinam_rmr IMPLEMENTATION.
 
 
 
+**********************************************************************
+"        DECLARACIÓN UNA VARIABLE DE REFERENCIA LR_DATA Y LE ASIGNAMOS MEMORIA PARA UN ENTERO (TIPO I)
+
+        DATA(lr_data) = NEW i( ).
+
+        "asociamos el contenido de la referencia lr_data(el entero en memoria)
+        "a un field-symbol <lfs_value>, para poder manipularlo de forma directa.
+
+        ASSIGN lr_data->* TO FIELD-SYMBOL(<lfs_value>).
+
+        "modificamos el valor apuntado por <lfs_value> (es decir el entero en memoria) y lo establecemos en 30
+        <lfs_value> = 30.
+
+        "Declaramos una referencia lr_class y creamos u nuevo objeto de la clase ZCL_xxx llamando a su constructor (el paéntesis vacio indica constructor sin parámetros.
+        data(lr_class) = new ZCL_CLASS_CONST_ESTRUCT_RMR( ).
+
+        out->write( lr_class ).
+
+
+
+
   ENDMETHOD.
 ENDCLASS.

@@ -138,23 +138,116 @@ CLASS zcl_field_symbols_rmr IMPLEMENTATION.
 **********************************************************************
 "    LEER REGISTROS
 
+*
+*
+*    SELECT
+*    FROM ztab_dbase_rmr
+*    FIELDS *
+*    INTO TABLE @DATA(gt_employees).
+*
+*    out->write( data =  gt_employees name = 'gt_employees' ).
+*    out->write( |\n| ).
+*
+*    READ TABLE gt_employees ASSIGNING FIELD-SYMBOL(<lfs_employee_rd>) WITH KEY first_name = 'Mario'.
+*
+*            <lfs_employee_rd>-last_name = 'Rivera'.
+*            <lfs_employee_rd>-email = 'rivera@experis.es'.
+*
+*
+*    out->write( data =  gt_employees name = 'gt_employees' ).
 
 
-    SELECT
-    FROM ztab_dbase_rmr
-    FIELDS *
-    INTO TABLE @DATA(gt_employees).
 
-    out->write( data =  gt_employees name = 'gt_employees' ).
-    out->write( |\n| ).
+**********************************************************************
 
-    READ TABLE gt_employees ASSIGNING FIELD-SYMBOL(<lfs_employee_rd>) WITH KEY first_name = 'Mario'.
-
-            <lfs_employee_rd>-last_name = 'Rivera'.
-            <lfs_employee_rd>-email = 'rivera@experis.es'.
+"          OBJETOS DE DATOS ANÓNIMOS
 
 
-    out->write( data =  gt_employees name = 'gt_employees' ).
+        DATA(lr_dato01) = NEW i( 123 ). "creamos un objeto de datos anónimo de TYPE i
+                                        " inicializamos a 123 y guarda un "ref to" i en lr_dato01
+        DATA(lr_dato02) = NEW ztab_dbase_rmr( id = 10005 first_name = 'Sofía' ). "creamos una estructura anónima de tipo ztab con lso valores indicados entre paréntesis.
+                                                                                " y guarda una ref to.
+
+         out->write( lr_dato01 ).
+         out->write( lr_dato02 ).
+
+         SELECT *
+         from ztab_dbase_rmr
+         INTO TABLE NEW @DATA(lr_dato03). "crea una tabla interna anónima con el resultado y devuelve una ref to en lr_data03
+
+            out->write( lr_dato03 ).
+
+          SELECT
+          SINGLE *
+          FROM ztab_dbase_rmr
+          INTO NEW @DATA(lr_dato04). "crea una estructura anónima con esa fila y devuelve un ref to en lr_dato04
+
+          out->write( lr_dato04 ). "sentencia dinámica con assign
+
+
+          """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+          "SENTENCIAS DINÁMICAS CON ASSIGN
+
+          TYPES: BEGIN OF lty_data,
+                 field1 TYPE i,
+                 field2 TYPE string,
+                 field3 TYPE string,
+           END OF lty_data.
+
+
+           DATA: ls_data TYPE lty_data,
+                 lt_data TYPE TABLE OF lty_data WITH EMPTY KEY.
+
+           ls_data = VALUE #(
+                             field1 = 1
+                             field2 = 'aaa'
+                             field3 = 'z'
+                             ).
+           APPEND ls_data to lt_data.
+
+
+           DATA(lr_data) = NEW lty_data( " crea referencia de datos a una estructura anónima.
+                             field1 = 2     "iniciada con los valores 2, b,y
+                             field2 = 'b'
+                             field3 = 'y'
+                             ).
+
+
+           FIELD-SYMBOLS <lfs_generic> TYPE DATA. "field symbol genérico dinámico.
+
+           ASSIGN ls_data-('field1')  TO <lfs_generic>. "asigna por nombre dinámico el comp. field1 de ls_data
+           out->write( <lfs_generic> ).
+
+           ASSIGN ls_data-field1  TO <lfs_generic>.
+            out->write( <lfs_generic> ).
+
+            ASSIGN lt_data[ 1 ]-('field1') TO <lfs_generic>.
+            out->write( lt_data ).
+
+            ASSIGN lt_data[ 1 ]-field1 TO <lfs_generic>.
+            out->write( lt_data ).
+
+            ASSIGN COMPONENT 'field2' OF STRUCTURE lr_data->* TO <lfs_generic>. "accede a field2 de la estructura referenciada
+                                                                                "importante al trabajar con referncias de datos usar el component
+            out->write( <lfs_generic> ).  " muestra b
+
+            ASSIGN COMPONENT 'field3' OF STRUCTURE lr_data->* TO <lfs_generic>. "accede a field2 de la estructura referenciada
+                                                                                "importante al trabajar con referncias de datos usar el component
+            out->write( <lfs_generic> ).  " muestra y
+
+
+            DATA lv_field TYPE string VALUE 'field2'.
+            ASSIGN ls_data-(lv_field) TO <lfs_generic>." asignación por nombre en variable field2
+            out->write( <lfs_generic> ). "muestra aaa
+
+
+            ASSIGN ls_data-field1 TO <lfs_generic>.  "asignación por nombre absoluto en c
+            out->write( <lfs_generic> ).  "muestra1.
+
+            ASSIGN ls_data-(3) TO <lfs_generic>.  "asignación por posición
+            out->write( <lfs_generic> ).  "muestra z
+
+
 
   ENDMETHOD.
 ENDCLASS.
