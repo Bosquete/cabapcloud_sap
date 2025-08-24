@@ -1,0 +1,37 @@
+managed implementation in class zbp_i_travel_acloud_rmr unique;
+strict ( 2 );
+
+define behavior for Z_I_travel_acloud_RMR alias Travel
+persistent table ztb_travel_rmr
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly, numbering: managed ) TravelUuid;
+
+  mapping for ztb_travel_rmr corresponding
+    {
+      TravelUUID           = travel_uuid;
+      TravelId             = travel_id;
+      AgencyId             = agency_id;
+      CustomerId           = customer_id ;
+      BeginDate            = begin_date;
+      EndDate              = end_date;
+      BookingFee           = booking_fee;
+      TotalPrice           = total_price;
+      CurrencyCode         = currency_code;
+      Description          = description;
+      OverallStatus        = overall_status;
+      LocalCreatedBy       = local_created_by;
+      LocalCreatedAt       = local_created_at;
+      LocalLastChangedBy   = local_last_changed_by;
+      LocalLastChangedAt   = local_last_changed_at;
+      LastChangedAt        = last_changed_at;
+
+   }
+
+
+}
